@@ -1,6 +1,6 @@
 import requests
 
-url = "https://abogadosariza.es"
+url = "https://miweb.com"
 
 # Hacemos una petición HTTP indicando que aceptamos varios tipos de compresión
 headers = {

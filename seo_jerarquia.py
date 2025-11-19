@@ -23,7 +23,7 @@ def obtener_encabezados(url):
 
 
 if __name__ == "__main__":
-    url = "https://abogadosariza.es"  # Cambia por la web que quieras
+    url = "https://miweb.com"  # Cambia por la web que quieras
     estructura = obtener_encabezados(url)
 
     print("Estructura de encabezados encontrada:\n")
