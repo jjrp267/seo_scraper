@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin, urlparse
+from seo_scraper import extraer_seo, mostrar_resultados
 
 visited = set()
 to_visit = set()
@@ -52,5 +53,7 @@ if __name__ == "__main__":
     pages = crawl_site(website)
 
     print("\nPáginas encontradas:")
-    for p in sorted(pages):
-        print(p)
+    for url in sorted(pages):
+        print(url)
+        data = extraer_seo(url)
+        mostrar_resultados(data, url)

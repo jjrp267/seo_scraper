@@ -37,11 +37,7 @@ def extraer_seo(url):
         "img_alts": img_alts
     }
 
-if __name__ == "__main__":
-    # Permite pasar URL como argumento: python seo_scraper.py https://miweb.com
-    url = sys.argv[1] if len(sys.argv) > 1 else "https://lariart.es/"
-    data = extraer_seo(url)
-
+def mostrar_resultados(data, url):
     print("\n===== RESULTADO SEO =====")
     print(f"URL: {url}")
     print(f"\n▶ Title:\n   {data['title']}")
@@ -84,3 +80,11 @@ if __name__ == "__main__":
         print("   No encontrados")
 
     print("\n=========================\n")
+
+
+if __name__ == "__main__":
+    # Permite pasar URL como argumento: python seo_scraper.py https://miweb.com
+    url = sys.argv[1] if len(sys.argv) > 1 else "https://lariart.es/"
+    data = extraer_seo(url)
+
+    mostrar_resultados(data, url)
